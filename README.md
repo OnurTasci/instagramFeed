@@ -16,15 +16,11 @@ git clone https://github.com/OnurTasci/instagramFeed.git
 <?php
 require 'instagramFeed.php';
 
-$instagram = new InstagramFeed();
-$posts = $instagram->getPosts('kullaniciadi', 10); // 'kullaniciadi' yerine Instagram kullanıcı adını yazın, 10 son gönderi sayısıdır
+$access_token = '';
+$instagram = new InstagramFeed(['access_token'=>$access_token,'cache'=>true]);
+$mediaAll  =  $instagram->media();
 
-if ($posts) {
-    echo "<pre>";
-    print_r($posts);
-    echo "</pre>";
-} else {
-    echo "Gönderiler alınamadı.";
-}
+print_r($mediaAll); exit;
+
 ?>
 ```
