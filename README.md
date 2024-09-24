@@ -14,7 +14,7 @@ git clone https://github.com/OnurTasci/instagramFeed.git
 
 ```php
 <?php
-require 'instagramFeed.php';
+require 'instagram.php';
 
 $access_token = '';
 $instagram = new InstagramFeed(['access_token'=>$access_token,'cache'=>true]);
